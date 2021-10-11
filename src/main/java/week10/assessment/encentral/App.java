@@ -617,7 +617,7 @@ public class App {
             else if (option == OPTION_SEARCH_TODO_BY_DATE_AFTER)
                 lookupDateStrategy = Todo.TodoLookupDateStrategy.AFTER_DATE;
 
-            if (lookupDateStrategy != null) {
+            if (lookupDateStrategy != null && option != OPTION_SEARCH_TODO_BY_DATE_CANCEL ) {
                 TreeList<Todo> todos = loggedInUser.searchTodosByDate(dateTime, lookupDateStrategy);
                 if (todos.isEmpty())
                     System.out.println("No Todo matched your query!");
