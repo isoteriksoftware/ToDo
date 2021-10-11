@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class AppTest {
 
     @Test
-    public void testSearchTodos() {
+    public void testCreateAndSearchTodos() {
         User user = new User("imran@encentral.com", "test");
         user.addTodo(new Todo("t1", "First todo", LocalDateTime.parse("2020-10-01T00:00:00")));
         user.addTodo(new Todo("t2", "Second todo", LocalDateTime.parse("2021-10-01T00:00:00")));
